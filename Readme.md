@@ -1,4 +1,4 @@
-## init.sh
+## init.sh for [Vim-BootStrap](https://github.com/avelino/vim-bootstrap)
 
 read the code!!
  - vim
