@@ -2,3 +2,5 @@
 colorscheme gruvbox
 " mouse
 set mouse=a
+" tab to space
+set expandtab
