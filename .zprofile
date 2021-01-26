@@ -35,7 +35,7 @@ function alog() {
     package=${1:-com.sankuai.meituan}
     while true
     do
-        pid=$(adb shell pidof $package)
+        pid=$(adb shell pidof $package| cut -d ' ' -f1)
         if [ -n "$pid" ]; then
             break;
         else
@@ -74,6 +74,11 @@ function png2str() {
         [ -f $1 ] && cat $1 || curl -sL $1
     } \
         | base64 | base64 -do /tmp/${md5_name}.png && echo "data:image/png;base64,$(base64 -i /tmp/${md5_name}.png)" && open /tmp/${md5_name}.png
+}
+
+func screencap() {
+    out=screencap_$(date +%Y%m%d-%H%M%S).png
+    adb exec-out screencap -p > $out && open $out
 }
 
 alias scrcpy="scrcpy --turn-screen-off --always-on-top --bit-rate 2M --max-size 1024"
