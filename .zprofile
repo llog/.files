@@ -81,6 +81,11 @@ func screencap() {
     adb exec-out screencap -p > $out && open $out
 }
 
+func hello() {
+    git config user.name hello
+    git config user.email hello@ifnot.cc
+}
+
 alias scrcpy="scrcpy --turn-screen-off --always-on-top --bit-rate 2M --max-size 1024"
 alias cnpm="npm --registry=https://registry.npm.taobao.org \
 --cache=$HOME/.npm/.cache/cnpm \
