@@ -2,7 +2,6 @@
 # for rn
 export ANDROID_HOME=$HOME/code/sdk
 export ANDROID_SDK=$HOME/code/sdk
-export ANDROID_NDK=$ANDROID_HOME/ndk/21.3.6528147
 export PATH=$PATH:$ANDROID_HOME/emulator
 export PATH=$PATH:$ANDROID_HOME/tools
 export PATH=$PATH:$ANDROID_HOME/tools/bin
@@ -15,8 +14,8 @@ export FLUTTER_STORAGE_BASE_URL=https://storage.flutter-io.cn
 # for ruby
 export PATH=/usr/local/opt/ruby/bin:/usr/local/lib/ruby/gems/3.0.0/bin:$PATH
 
-#export HOMEBREW_BOTTLE_DOMAIN=https://mirrors.ustc.edu.cn/homebrew-bottles
-export HOMEBREW_BOTTLE_DOMAIN="https://mirrors.tuna.tsinghua.edu.cn/homebrew-bottles"
+export HOMEBREW_BOTTLE_DOMAIN=https://mirrors.ustc.edu.cn/homebrew-bottles
+#export HOMEBREW_BOTTLE_DOMAIN="https://mirrors.tuna.tsinghua.edu.cn/homebrew-bottles"
 
 function ipaddr() {
     curl https://api.ipify.org
@@ -86,7 +85,7 @@ func hello() {
     git config user.email hello@ifnot.cc
 }
 
-alias scrcpy="scrcpy --turn-screen-off --always-on-top --bit-rate 2M --max-size 1024"
+alias scrcpy="scrcpy --always-on-top --bit-rate 2M --max-size 1024"
 alias cnpm="npm --registry=https://registry.npm.taobao.org \
 --cache=$HOME/.npm/.cache/cnpm \
 --disturl=https://npm.taobao.org/dist \
@@ -104,3 +103,4 @@ export NVM_NODEJS_ORG_MIRROR=http://npm.sankuai.com/mirrors/node
 export N_PREFIX=~/.n
 export N_NODE_MIRROR=http://npm.sankuai.com/dist/node
 export PATH=~/.n/bin:$PATH
+
